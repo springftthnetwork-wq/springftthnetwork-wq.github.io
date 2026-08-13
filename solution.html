@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | FTTA & Fiber Optic Connectivity — Shenzhen Taisun Optical</title>
+    <meta name="description" content="Industry solutions from Shenzhen Taisun Optical: FTTA/5G base station deployment, FTTx access networks, telecom backhaul, data center and surveillance fiber connectivity — with waterproof connectors and ruggedized cable assemblies.">
+    <meta name="keywords" content="FTTA solution, 5G base station fiber, FTTx network, FTTH, telecom backhaul, waterproof fiber connector, fiber optic solutions">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230066CC'/%3E%3Cpath d='M16 6 L16 16 L24 12' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 16 L16 26 M10 22 L16 26 L22 22' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="nav-logo">
+            <svg viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0055A4"/>
+                        <stop offset="100%" style="stop-color:#00A8E8"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="8,44 28,8 48,44" fill="url(#logoGrad)" opacity="0.9"/>
+                <path d="M58,40 Q66,28 74,40" fill="none" stroke="#0055A4" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M62,34 Q66,22 70,34" fill="none" stroke="#00A8E8" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M66,28 Q68,18 70,28" fill="none" stroke="#00A8E8" stroke-width="2" stroke-linecap="round"/>
+                <text x="82" y="29" font-family="Arial, sans-serif" font-weight="800" font-size="14" fill="#003D7A" letter-spacing="0.5">TAISUN</text>
+                <text x="82" y="42" font-family="Arial, sans-serif" font-weight="600" font-size="9" fill="#777" letter-spacing="1.2">OPTICAL</text>
+            </svg>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="solution.html" class="active">Solutions</a></li>
+            <li><a href="company.html">Company</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#inquiry" class="nav-cta">Get a Quote</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+    <div class="container">
+        <div class="crumb">Industry Solutions</div>
+        <h1>Fiber Connectivity<br>for <span style="color:var(--accent)">Every Network</span></h1>
+        <p>From 5G base stations to FTTx access networks — we supply the waterproof connectors and ruggedized cable assemblies that keep fiber links reliable, rain or shine.</p>
+    </div>
+</section>
+
+<!-- ── FTTA Topology ── -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">FTTA Deployment, Made Simple</h2>
+        <p class="section-subtitle">Fiber-to-the-Antenna moves optical signals from the equipment room up to the antenna. Our waterproof connectors protect every outdoor mating point.</p>
+        <div class="topology-wrap">
+            <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+                <!-- Indoor equipment room -->
+                <rect x="30" y="90" width="200" height="160" rx="14" fill="#F4F8FC" stroke="#0055A4" stroke-width="2"/>
+                <text x="130" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#003D7A">EQUIPMENT ROOM</text>
+                <rect x="60" y="140" width="70" height="44" rx="8" fill="#0055A4"/>
+                <text x="95" y="167" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">BBU</text>
+                <rect x="150" y="140" width="70" height="44" rx="8" fill="#0077CC"/>
+                <text x="185" y="167" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">OLT</text>
+                <text x="130" y="215" text-anchor="middle" font-size="11" fill="#777">Indoor / Weather-protected</text>
+
+                <!-- Feeder cable -->
+                <line x1="230" y1="162" x2="430" y2="162" stroke="#00A8E8" stroke-width="4"/>
+                <line x1="230" y1="162" x2="430" y2="162" stroke="#0055A4" stroke-width="4" stroke-dasharray="2 14" opacity="0.35"/>
+
+                <!-- Junction / breakout -->
+                <rect x="430" y="120" width="90" height="84" rx="10" fill="#FFF3E6" stroke="#D97706" stroke-width="1.8"/>
+                <text x="475" y="147" text-anchor="middle" font-size="12" font-weight="700" fill="#D97706">JUNCTION</text>
+                <text x="475" y="166" text-anchor="middle" font-size="11" fill="#555">Distribution</text>
+                <text x="475" y="182" text-anchor="middle" font-size="11" fill="#555">Point</text>
+
+                <!-- Tower riser -->
+                <line x1="520" y1="162" x2="640" y2="162" stroke="#00A8E8" stroke-width="4"/>
+
+                <!-- Waterproof connector marks on outdoor run -->
+                <g>
+                    <circle cx="700" cy="150" r="12" fill="#fff" stroke="#D64545" stroke-width="2.5"/>
+                    <circle cx="700" cy="150" r="4" fill="#D64545"/>
+                    <text x="700" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="#D64545">FTTA</text>
+                    <circle cx="760" cy="150" r="12" fill="#fff" stroke="#D64545" stroke-width="2.5"/>
+                    <circle cx="760" cy="150" r="4" fill="#D64545"/>
+                    <text x="760" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="#D64545">FTTA</text>
+                </g>
+
+                <!-- Antenna tower -->
+                <line x1="740" y1="60" x2="740" y2="280" stroke="#1A1A2E" stroke-width="5"/>
+                <line x1="700" y1="200" x2="780" y2="200" stroke="#1A1A2E" stroke-width="3"/>
+                <line x1="712" y1="240" x2="768" y2="240" stroke="#1A1A2E" stroke-width="2.5"/>
+                <line x1="724" y1="120" x2="756" y2="120" stroke="#1A1A2E" stroke-width="2"/>
+                <!-- RRU -->
+                <rect x="762" y="180" width="66" height="40" rx="6" fill="#0055A4"/>
+                <text x="795" y="205" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">RRU</text>
+                <!-- Antenna -->
+                <g transform="translate(740,60)">
+                    <rect x="-6" y="-34" width="12" height="34" rx="3" fill="#003D7A"/>
+                    <line x1="0" y1="-44" x2="0" y2="-34" stroke="#003D7A" stroke-width="3"/>
+                </g>
+                <text x="740" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#003D7A">ANTENNA TOWER (OUTDOOR)</text>
+
+                <!-- Cable from RRU down -->
+                <path d="M762,200 L700,200" stroke="#00A8E8" stroke-width="3" fill="none"/>
+                <path d="M700,200 L700,150" stroke="#00A8E8" stroke-width="3" fill="none"/>
+
+                <!-- Legend -->
+                <rect x="30" y="30" width="260" height="40" rx="8" fill="#fff" stroke="#E0E8F0"/>
+                <circle cx="60" cy="50" r="6" fill="#D64545"/>
+                <text x="74" y="55" font-size="12" fill="#555">FTTA waterproof connector (OptiTap / ODVA / FullAXS)</text>
+            </svg>
+            <p class="topology-note">Typical FTTA architecture: indoor BBU/OLT → feeder cable → junction point → tower riser → waterproof FTTA connectors → RRU & antenna.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ── Solutions ── -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Solutions by Industry</h2>
+        <p class="section-subtitle">Proven product combinations for the most common fiber network scenarios.</p>
+        <div class="solution-grid">
+            <!-- FTTA / 5G -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-blue">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20"/><path d="M5 20V10"/><path d="M9 20V6"/><path d="M13 20V8"/><path d="M17 20V4"/><path d="M21 20v-8"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">MOST POPULAR</div>
+                        <h3>FTTA / 5G Base Station</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Connect BBU/RRU to antenna with IP67/IP68 waterproof connectors built for tower-top environments, extreme temperatures and repeated mating.</p>
+                    <h4>Recommended Products</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">OptiTap</span>
+                        <span class="sol-tag-chip">ODVA Series</span>
+                        <span class="sol-tag-chip">FullAXS Series</span>
+                        <span class="sol-tag-chip">Outdoor Patch Cords</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FTTx -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-teal">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">FTTH / FTTB / FTTA</div>
+                        <h3>FTTx Access Networks</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Complete fiber access connectivity from the OLT to the subscriber — drop cables, distribution points, indoor connectors and closures.</p>
+                    <h4>Recommended Products</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">PDLC</span>
+                        <span class="sol-tag-chip">Universal Connector</span>
+                        <span class="sol-tag-chip">FTTA Jumper</span>
+                        <span class="sol-tag-chip">Adapter Panels</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backhaul -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-orange">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v7M12 15v7M2 12h7M15 12h7"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">CARRIER-GRADE</div>
+                        <h3>Backhaul & Metro Networks</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Reliable high-density connectivity for aggregation sites, metro rings and long-haul links where low insertion loss and stability are non-negotiable.</p>
+                    <h4>Recommended Products</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">CPRI LC</span>
+                        <span class="sol-tag-chip">NSN Boot LC</span>
+                        <span class="sol-tag-chip">ODC Cable</span>
+                        <span class="sol-tag-chip">Patch Cords</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Center -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-purple">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">HIGH DENSITY</div>
+                        <h3>Data Center & Enterprise</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Precision-terminated assemblies with controlled IL/RL for server rooms, campus networks and enterprise cabling infrastructure.</p>
+                    <h4>Recommended Products</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">ODC Cable</span>
+                        <span class="sol-tag-chip">LC Patch Cords</span>
+                        <span class="sol-tag-chip">Universal Connector</span>
+                        <span class="sol-tag-chip">Custom Assemblies</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surveillance -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-red">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">OUTDOOR</div>
+                        <h3>Security & Surveillance</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Waterproof fiber links for outdoor CCTV, traffic monitoring and perimeter systems — immune to lightning and long-distance signal loss.</p>
+                    <h4>Recommended Products</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">ODVA Series</span>
+                        <span class="sol-tag-chip">ODC Cable</span>
+                        <span class="sol-tag-chip">Outdoor Patch Cords</span>
+                        <span class="sol-tag-chip">PDLC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom -->
+            <div class="sol-card">
+                <div class="sol-head">
+                    <div class="sol-icon ic-blue">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <div>
+                        <div class="sol-tag">OEM / ODM</div>
+                        <h3>Custom & OEM Projects</h3>
+                    </div>
+                </div>
+                <div class="sol-body">
+                    <p>Bespoke assemblies with your logo, your specifications, your packaging. Ideal for integrators, distributors and brand builders.</p>
+                    <h4>We Support</h4>
+                    <div class="sol-tags">
+                        <span class="sol-tag-chip">Custom Lengths</span>
+                        <span class="sol-tag-chip">Private Label</span>
+                        <span class="sol-tag-chip">Special Specs</span>
+                        <span class="sol-tag-chip">Fast Sampling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── How we help ── -->
+<section class="section">
+    <div class="container two-col">
+        <div>
+            <h2>How We Help You Win Projects</h2>
+            <p>As a specialized supplier, we don't just sell connectors — we help you specify the right solution, so you can quote with confidence and install without surprises.</p>
+            <ul>
+                <li>Free technical guidance on connector selection and compatibility</li>
+                <li>Test reports, drawings and compliance documentation on request</li>
+                <li>Mixed-product orders to reduce your shipping costs</li>
+                <li>Reliable lead times with proactive order tracking</li>
+            </ul>
+            <p style="margin-top:18px;"><a href="index.html#inquiry" class="btn btn-primary">Get Technical Support</a></p>
+        </div>
+        <div>
+            <h2>Global Delivery</h2>
+            <p>We ship worldwide from Shenzhen, China, serving telecom operators, tower companies, system integrators and distributors across the Middle East, Southeast Asia, Africa, Latin America and Europe.</p>
+            <ul>
+                <li>Door-to-door via DHL, FedEx, UPS or sea freight (LCL/FCL)</li>
+                <li>Export-grade packaging for long-distance transport</li>
+                <li>Customs documentation prepared for smooth clearance</li>
+                <li>Bulk stock programs for repeat orders</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-band">
+    <div class="container">
+        <h2>Not Sure Which Product Fits Your Project?</h2>
+        <p>Send us your network diagram or requirements — we'll recommend the right FTTA and fiber optic products, free of charge.</p>
+        <div class="hero-btns">
+            <a href="index.html#inquiry" class="btn btn-primary">Request a Quote</a>
+            <a href="index.html#products" class="btn btn-outline">Browse Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+    <div class="container">
+        <div class="footer-brand">
+            <h4 style="display:flex;align-items:center;gap:8px;">
+                <svg viewBox="0 0 32 32" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="4,28 18,4 32,28" fill="url(#flg)"/>
+                    <defs><linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00A8E8"/><stop offset="100%" stop-color="#0055A4"/></linearGradient></defs>
+                </svg>
+                Taisun Optical
+            </h4>
+            <p>Shenzhen Taisun Optical Technology Co., Ltd. — Professional FTTA and fiber optic connectivity solutions supplier. Quality you can trust, service you can rely on.</p>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="index.html#products">OptiTap</a></li>
+                    <li><a href="index.html#products">ODVA Series</a></li>
+                    <li><a href="index.html#products">FullAXS Series</a></li>
+                    <li><a href="index.html#products">ODC Cable</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solution.html">Solutions</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        &copy; 2026 Shenzhen Taisun Optical Technology Co., Ltd. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,555 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shenzhen Taisun Optical Technology Co., Ltd. — FTTA & Fiber Optic Connectivity Solutions</title>
-    <meta name="description" content="Shenzhen Taisun Optical — Professional supplier of FTTA connectors, OptiTap, ODVA, FullAXS, PDLC, CPRI, ODC and fiber optic cable assemblies. ISO certified, custom OEM supported.">
-    <meta name="keywords" content="FTTA connector, OptiTap, ODVA, FullAXS, PDLC, fiber optic patch cord, FTTA cable assembly, waterproof fiber connector">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230066CC'/%3E%3Cpath d='M16 6 L16 16 L24 12' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 16 L16 26 M10 22 L16 26 L22 22' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taisun Optical — One-Stop Hardware Partner for Telecom Operators</title>
+<meta name="description" content="Shenzhen Taisun Optical Technology Co., Ltd. — one-stop operator passive &amp; active fiber optic products supplier. 10+ years supplying fiber connectivity, PON, transmission and access hardware, sourced, tested and delivered as a single coordinated order.">
+<style>
+:root{
+  --navy:#0b2a4a; --navy-2:#123c66; --blue:#1f6feb; --blue-d:#1758c4;
+  --teal:#0f766e; --teal-l:#e8f5f3;
+  --ink:#16212e; --muted:#5a6b7c; --line:#e3e9f0;
+  --bg:#ffffff; --bg-soft:#f6f9fc; --bg-navy:#0b2a4a;
+  --radius:14px;
+  --shadow:0 1px 2px rgba(11,42,74,.05), 0 8px 24px rgba(11,42,74,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+a{color:var(--blue);text-decoration:none}
+img{max-width:100%}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--navy);color:#cfe0f2;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.topbar a{color:#cfe0f2}
+.topbar a:hover{color:#fff}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--navy);letter-spacing:.2px}
+.logo .dot{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center}
+.logo .dot svg{width:18px;height:18px}
+.logo small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.4px;line-height:1.2}
+nav.menu{display:flex;gap:28px;align-items:center}
+nav.menu a{color:var(--ink);font-size:15px;font-weight:500}
+nav.menu a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff!important;padding:10px 20px;border-radius:9px;font-weight:600;font-size:15px;transition:background .15s}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.45);color:#fff!important}
+.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn.dark{background:var(--navy);color:#fff!important}
+.btn.dark:hover{background:var(--navy-2)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px}
+
+/* ---------- hero ---------- */
+.hero{background:
+  radial-gradient(1000px 400px at 85% -10%, rgba(31,111,235,.10), transparent 60%),
+  radial-gradient(800px 380px at -10% 110%, rgba(15,118,110,.10), transparent 60%),
+  var(--bg-soft);
+  border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;padding-top:84px;padding-bottom:84px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f1fe;color:var(--blue-d);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+.eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.hero h1{font-size:44px;line-height:1.18;letter-spacing:-.5px;color:var(--navy);font-weight:800;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:32px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.metrics{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+.metrics .m b{display:block;font-size:26px;color:var(--navy);font-weight:800;letter-spacing:-.3px}
+.metrics .m span{font-size:13.5px;color:var(--muted)}
+.hero-visual{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.hero-visual .hv-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.hero-visual .hv-head b{font-size:15px;color:var(--navy)}
+.hero-visual .hv-head span{font-size:12px;color:var(--muted);background:var(--bg-soft);padding:3px 10px;border-radius:999px}
+.hv-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:14px;background:var(--bg)}
+.hv-row .tag{font-size:11px;font-weight:700;color:var(--blue-d);background:#e8f1fe;padding:2px 8px;border-radius:6px;white-space:nowrap}
+.hv-row .tag.green{color:var(--teal);background:var(--teal-l)}
+.hv-row .bar{flex:1;height:6px;background:#eef2f7;border-radius:3px;overflow:hidden}
+.hv-row .bar i{display:block;height:100%;border-radius:3px}
+.hv-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px}
+
+/* ---------- sections ---------- */
+section{padding:84px 0}
+section.soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head .kicker{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.sec-head h2{font-size:32px;line-height:1.25;color:var(--navy);letter-spacing:-.3px;font-weight:800;margin-bottom:14px}
+.sec-head p{font-size:16.5px;color:var(--muted)}
+
+/* ---------- value props ---------- */
+.vp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.vp-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:box-shadow .2s,border-color .2s}
+.vp-card:hover{box-shadow:var(--shadow);border-color:#c9d6e5}
+.vp-card .ic{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:#e8f1fe}
+.vp-card .ic.teal{background:var(--teal-l)}
+.vp-card .ic svg{width:22px;height:22px}
+.vp-card h3{font-size:17px;color:var(--navy);font-weight:700;margin-bottom:8px}
+.vp-card p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- products ---------- */
+.flagship{background:var(--navy);border-radius:18px;color:#fff;padding:34px 36px;display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:40px;flex-wrap:wrap}
+.flagship .f-tag{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#7fd1e8;margin-bottom:10px}
+.flagship h3{font-size:24px;font-weight:800;margin-bottom:8px;letter-spacing:-.2px}
+.flagship p{font-size:14.5px;color:#cfe0f2;max-width:560px}
+.flagship .f-chip{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.flagship .f-chip span{font-size:12.5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:5px 12px;border-radius:999px;color:#eaf3fb}
+.flagship .f-star{font-size:13px;font-weight:600;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:12px 20px;border-radius:12px;text-align:center;max-width:230px;color:#fff}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px}
+.cat{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.cat:hover{box-shadow:var(--shadow)}
+.cat .c-tag{font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.cat h4{font-size:16px;color:var(--navy);font-weight:700;margin-bottom:8px}
+.cat ul{list-style:none}
+.cat li{font-size:13.5px;color:var(--muted);padding:4px 0 4px 16px;position:relative}
+.cat li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.cat li.g::before{background:var(--teal)}
+.matrix-table{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.matrix-table th{background:var(--bg-soft);text-align:left;font-size:13px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);padding:14px 18px;border-bottom:1px solid var(--line);font-weight:700}
+.matrix-table td{padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line);vertical-align:top}
+.matrix-table tr:last-child td{border-bottom:none}
+.matrix-table td b{color:var(--navy)}
+.matrix-table td .pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;margin:2px 4px 2px 0}
+.pill.halo{background:#e8f1fe;color:var(--blue-d)}
+.pill.basket{background:var(--teal-l);color:var(--teal)}
+
+/* ---------- how we serve ---------- */
+.how-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.how{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px}
+.how .n{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:8px}
+.how h4{font-size:15px;color:var(--navy);font-weight:700;margin-bottom:6px}
+.how p{font-size:13px;color:var(--muted)}
+
+/* ---------- why us ---------- */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.why h2{font-size:30px;color:var(--navy);font-weight:800;letter-spacing:-.3px;margin-bottom:16px}
+.why .sub{font-size:16px;color:var(--muted);margin-bottom:26px}
+.check{display:flex;gap:12px;padding:11px 0;align-items:flex-start}
+.check .ok{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal-l);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;margin-top:2px}
+.check b{color:var(--navy);font-size:15px;font-weight:600}
+.check p{font-size:14px;color:var(--muted)}
+.why-visual{background:var(--navy);color:#fff;border-radius:18px;padding:34px;position:relative;overflow:hidden}
+.why-visual::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(31,111,235,.25);top:-90px;right:-90px}
+.why-visual h3{font-size:20px;font-weight:800;margin-bottom:6px;position:relative;z-index:1}
+.why-visual .q{font-size:14.5px;color:#cfe0f2;margin-bottom:24px;position:relative;z-index:1}
+.wv-row{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;position:relative;z-index:1}
+.wv-row:last-child{border-bottom:none}
+.wv-row .yr{font-weight:800;color:#7fd1e8;min-width:52px}
+.wv-row span{color:#eaf3fb}
+
+/* ---------- contact ---------- */
+.contact-cta{background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:20px;padding:56px;text-align:center;color:#fff}
+.contact-cta h2{font-size:30px;font-weight:800;margin-bottom:12px;letter-spacing:-.3px}
+.contact-cta p{font-size:16px;color:#cfe0f2;max-width:620px;margin:0 auto 28px}
+.contact-cta .big-mail{font-size:20px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:12px 26px;border-radius:12px;display:inline-block;margin-bottom:16px}
+
+/* ---------- footer ---------- */
+footer{background:var(--bg-navy);color:#9db4cc;font-size:13.5px}
+footer .wrap{padding:44px 24px 30px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h5{color:#fff;font-size:14px;margin-bottom:14px;font-weight:700}
+footer a{color:#9db4cc;display:block;padding:4px 0}
+footer a:hover{color:#fff}
+footer p.about{max-width:340px;margin-top:12px;line-height:1.7}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;text-align:center;font-size:12.5px;color:#7c93ad}
+
+@media(max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:56px;gap:36px}
+  .hero h1{font-size:34px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  nav.menu{display:none}
+  .burger{display:block}
+  .vp-grid,.cat-grid,.how-grid{grid-template-columns:1fr}
+  .metrics{gap:20px}
+  .contact-cta{padding:40px 24px}
+}
+</style>
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav>
-    <div class="container">
-        <a href="index.html" class="nav-logo">
-            <svg viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg">
-                <!-- Mountain peak + fiber signal -->
-                <defs>
-                    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#0055A4"/>
-                        <stop offset="100%" style="stop-color:#00A8E8"/>
-                    </linearGradient>
-                </defs>
-                <!-- Mountain -->
-                <polygon points="8,44 28,8 48,44" fill="url(#logoGrad)" opacity="0.9"/>
-                <!-- Signal arcs -->
-                <path d="M58,40 Q66,28 74,40" fill="none" stroke="#0055A4" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M62,34 Q66,22 70,34" fill="none" stroke="#00A8E8" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M66,28 Q68,18 70,28" fill="none" stroke="#00A8E8" stroke-width="2" stroke-linecap="round"/>
-                <!-- Company name -->
-                <text x="82" y="29" font-family="Arial, sans-serif" font-weight="800" font-size="14" fill="#003D7A" letter-spacing="0.5">TAISUN</text>
-                <text x="82" y="42" font-family="Arial, sans-serif" font-weight="600" font-size="9" fill="#777" letter-spacing="1.2">OPTICAL</text>
-            </svg>
-        </a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="index.html#products">Products</a></li>
-            <li><a href="solution.html">Solutions</a></li>
-            <li><a href="company.html">Company</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="index.html#inquiry" class="nav-cta">Get a Quote</a></li>
-        </ul>
-        <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
+<div class="topbar">
+  <div class="wrap">
+    <span>One-stop operator passive &amp; active fiber optic products supplier · Shenzhen, China</span>
+    <a href="mailto:sales@taisunop.com">sales@taisunop.com</a>
+  </div>
+</div>
 
-<!-- ── Hero ── -->
+<header class="nav">
+  <div class="wrap">
+    <div class="logo">
+      <span class="dot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 12h5l3-7 4 14 3-7h1"/></svg>
+      </span>
+      <span>Taisun Optical<small>Operator hardware · one-stop supply</small></span>
+    </div>
+    <nav class="menu">
+      <a href="#why">Why operators</a>
+      <a href="#products">Products</a>
+      <a href="#how">How we serve</a>
+      <a href="#about">Why us</a>
+      <a href="#contact" class="btn">Request capability list</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
 <section class="hero">
-    <div class="container">
-        <h1>Reliable <span>FTTA & Fiber Optic</span><br>Connectivity Solutions</h1>
-        <p>Shenzhen Taisun Optical Technology Co., Ltd. — your trusted partner for FTTA connectors, OptiTap, ODVA, FullAXS, PDLC, CPRI, ODC and custom fiber optic cable assemblies. ISO certified quality, competitive pricing, fast delivery.</p>
-        <div class="hero-btns">
-            <a href="#inquiry" class="btn btn-primary">Request a Quote</a>
-            <a href="#products" class="btn btn-outline">Explore Products</a>
-        </div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span>Positioned for telecom operators — not one-off traders</span>
+      <h1>The one-stop hardware partner <em>operators</em> actually trust</h1>
+      <p class="lead">Ten years of supplying operators across access, transport and mobile networks. One point of contact for fiber connectivity, PON, transmission and access hardware — sourced, tested and delivered as a single coordinated order.</p>
+      <div class="cta">
+        <a href="#contact" class="btn">Get our capability list</a>
+        <a href="#products" class="btn ghost dark" style="border-color:var(--navy);color:var(--navy)!important">Explore product range</a>
+      </div>
+      <div class="metrics">
+        <div class="m"><b>10+</b><span>years serving operators</span></div>
+        <div class="m"><b>30+</b><span>markets supplied</span></div>
+        <div class="m"><b>ISO 9001</b><span>certified supply chain</span></div>
+        <div class="m"><b>1 PO</b><span>one partner, one shipment</span></div>
+      </div>
     </div>
+    <div class="hero-visual">
+      <div class="hv-head"><b>One order, one partner</b><span>Live example</span></div>
+      <div class="hv-row"><span class="tag">SFP+ transceivers</span><div class="bar"><i style="width:88%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">12,000 pcs</span></div>
+      <div class="hv-row"><span class="tag green">Fiber patch cords</span><div class="bar"><i style="width:96%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">4,800 pcs</span></div>
+      <div class="hv-row"><span class="tag">PON OLT &amp; ONT</span><div class="bar"><i style="width:74%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">620 units</span></div>
+      <div class="hv-row"><span class="tag green">PLC splitters</span><div class="bar"><i style="width:82%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">9,300 pcs</span></div>
+      <div class="hv-row"><span class="tag">Media converters</span><div class="bar"><i style="width:66%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">1,150 units</span></div>
+      <div class="hv-row"><span class="tag green">FTTH boxes</span><div class="bar"><i style="width:90%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">2,700 units</span></div>
+      <p class="hv-note">A real blended order, coordinated by one team — one quote, one QC pass, one shipment.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ── Advantages ── -->
-<section class="section section-alt" id="advantages">
-    <div class="container">
-        <h2 class="section-title">Why Choose Taisun Optical</h2>
-        <p class="section-subtitle">We combine deep industry expertise with reliable supply chain to deliver value</p>
-        <div class="advantages-grid">
-            <div class="adv-card">
-                <div class="adv-icon ic-blue">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <h3>12+ Years FTTA Expertise</h3>
-                <p>Focused on FTTA connectivity products since day one — we know what telecom operators and contractors need.</p>
-            </div>
-            <div class="adv-card">
-                <div class="adv-icon ic-teal">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
-                <h3>ISO Certified Quality</h3>
-                <p>All products manufactured under ISO 9001 certified processes. Full testing reports available — insertion loss, return loss, waterproof IP67/IP68.</p>
-            </div>
-            <div class="adv-card">
-                <div class="adv-icon ic-orange">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                </div>
-                <h3>Custom OEM & ODM Supported</h3>
-                <p>Custom cable lengths, connector types, labeling, and packaging. Low MOQ for sample orders and trial runs.</p>
-            </div>
-            <div class="adv-card">
-                <div class="adv-icon ic-purple">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                </div>
-                <h3>Fast Delivery & Flexible Supply</h3>
-                <p>Strategic partnership with top-tier manufacturers ensures stable supply and quick turnaround. Express shipping worldwide.</p>
-            </div>
-        </div>
+<section id="why" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Why operators work with us</div>
+      <h2>Built for the way operators actually buy</h2>
+      <p>Most traders sell products. We run your hardware procurement as one program — so your teams stop chasing a dozen vendors and start receiving a single coordinated supply line.</p>
     </div>
+    <div class="vp-grid">
+      <div class="vp-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+        <h3>One PO, one partner</h3>
+        <p>Consolidate fiber connectivity, modules, PON and access hardware into a single order with one quotation, one QC process and one shipment schedule. Fewer vendors, fewer gaps, fewer headaches for your procurement team.</p>
+      </div>
+      <div class="vp-card">
+        <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Operator-grade QA</h3>
+        <p>Every line is tested to published spec — insertion loss, return loss, IP67/IP68 waterproofing — with full test reports and compliance documentation delivered with your goods.</p>
+      </div>
+      <div class="vp-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Continuity you can plan on</h3>
+        <p>Stable supply, consistent lead times and transparent order status across every category. We hold capacity with manufacturing partners in Shenzhen — the heart of the global optical supply chain.</p>
+      </div>
+      <div class="vp-card">
+        <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>We speak procurement</h3>
+        <p>Spec sheets, compliance files, packaging to your standards, customs-friendly documentation. Your team gets what it needs to approve, import and deploy without friction.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ── Products ── -->
-<section class="section" id="products">
-    <div class="container">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Comprehensive FTTA and fiber optic connectivity product lines for telecom infrastructure</p>
-
-        <!-- Tabs -->
-        <div class="product-tabs" id="productTabs">
-            <button class="product-tab active" data-tab="optitap">OptiTap</button>
-            <button class="product-tab" data-tab="odva">ODVA</button>
-            <button class="product-tab" data-tab="fullaxs">FullAXS</button>
-            <button class="product-tab" data-tab="nsn">NSN Boot LC</button>
-            <button class="product-tab" data-tab="cpri">CPRI LC</button>
-            <button class="product-tab" data-tab="pdlc">PDLC</button>
-            <button class="product-tab" data-tab="universal">Universal</button>
-            <button class="product-tab" data-tab="odc">ODC Cable</button>
-            <button class="product-tab" data-tab="newprod">New Product</button>
-        </div>
-
-        <!-- OptiTap -->
-        <div class="product-detail active" id="tab-optitap">
-            <div class="product-header">
-                <div class="product-img"><img src="images/optitap.png" alt="OptiTap Compatible Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>OptiTap Compatible Solutions</h3>
-                    <p class="sub-products">
-                        Complete OptiTap-compatible product line for FTTH/FTTA drop cable deployments:<br><br>
-                        • Dielectric ROC Drop Cable Assemblies<br>
-                        • Female H-Connector In-Line Receptacle for OptiTap<br>
-                        • FTTH Waterproof Multiport Flex Splitter Terminal Box<br>
-                        • OptiTap Compatible SC Hardened Adapter<br>
-                        • OptiTap Fiber Optical Patch Cord<br>
-                        • OptiTap Fiber Squid Cable Waterproof Terminal Box<br>
-                        • OptiTap Field Installable Connector (5.0mm Circular Cable)<br>
-                        • OptiTap Field Installable Hardened & Reinforced Connector<br>
-                        • OptiTap SC/APC Patch Cord with 5.0mm Circular Cable<br>
-                        • OptiTap to OptiTap Connector Drop Cable<br>
-                        • OptiTap to SC/APC Connector Jumper with SST Toneable Cable<br>
-                        • OptiTap Toneable ROC Drop Cable<br>
-                        • Pre-Connectorized OptiTap SST Drop Cable
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>OptiTap Compatible SC/APC</td></tr>
-                <tr><th>Fiber Type</th><td>G.657A1/A2 Bend-Insensitive Single-mode</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.3 dB (typical)</td></tr>
-                <tr><th>Return Loss</th><td>≥ 60 dB (APC)</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP67 / IP68</td></tr>
-                <tr><th>Operating Temperature</th><td>-40°C to +85°C</td></tr>
-                <tr><th>Cable Diameter Options</th><td>3.0mm / 5.0mm / Drop Cable</td></tr>
-                <tr><th>Mating Durability</th><td>≥ 500 cycles</td></tr>
-                <tr><th>Custom Options</th><td>Length, labeling, packaging, OEM branding</td></tr>
-            </table>
-        </div>
-
-        <!-- ODVA -->
-        <div class="product-detail" id="tab-odva">
-            <div class="product-header">
-                <div class="product-img"><img src="images/odva.png" alt="ODVA Outdoor Waterproof Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>ODVA Connector Series (SC / LC / MPO)</h3>
-                    <p class="sub-products">
-                        Rugged outdoor connectors designed for FTTA remote radio unit connections:<br><br>
-                        • FTTA ODVA LC Connector Cable Assemblies<br>
-                        • IP67 Waterproof ODVA-SC Fiber Optic Connector<br>
-                        • ODVA MPO Fiber Optic Cable
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Interface</th><td>ODVA Standard (LC / SC / MPO)</td></tr>
-                <tr><th>Fiber Mode</th><td>Single-mode (SM) / Multi-mode (MM)</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB (SM), ≤ 0.25 dB (MM typical)</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB (UPC), ≥ 60 dB (APC)</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP67</td></tr>
-                <tr><th>Operating Temperature</th><td>-40°C to +85°C</td></tr>
-                <tr><th>Mating Durability</th><td>≥ 500 cycles</td></tr>
-                <tr><th>Cable Type</th><td>Outdoor armored / LSZH jacket</td></tr>
-                <tr><th>Application</th><td>FTTA RRU-BBU fiber links, tower-mounted equipment</td></tr>
-            </table>
-        </div>
-
-        <!-- FullAXS -->
-        <div class="product-detail" id="tab-fullaxs">
-            <div class="product-header">
-                <div class="product-img"><img src="images/fullaxs.png" alt="FullAXS Miniature Outdoor Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>FullAXS Connector Series (SC / LC / MPO)</h3>
-                    <p class="sub-products">
-                        Weatherproof connector solutions with bayonet locking for quick field installation:<br><br>
-                        • IP-FX FullAXS Connector Cable Assemblies<br>
-                        • New Style Waterproof FullAXS Connector Cable Assemblies
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>FullAXS (SC / LC / MPO compatible)</td></tr>
-                <tr><th>Locking Mechanism</th><td>Bayonet-style quick lock</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP67</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB (UPC) / ≥ 60 dB (APC)</td></tr>
-                <tr><th>Operating Temperature</th><td>-40°C to +85°C</td></tr>
-                <tr><th>Salt Mist Resistance</th><td>≥ 96 hours (IEC 61300-2-26)</td></tr>
-                <tr><th>Applications</th><td>Outdoor FTTA, 4G/5G base stations, harsh environment</td></tr>
-            </table>
-        </div>
-
-        <!-- NSN Boot Duplex LC -->
-        <div class="product-detail" id="tab-nsn">
-            <div class="product-header">
-                <div class="product-img"><img src="images/nsn.png" alt="NSN Boot LC Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>NSN Boot Duplex LC Patch Cable</h3>
-                    <p class="sub-products">
-                        NSN-compatible duplex LC patch cables with specialized boot design for high-density patching environments.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>Duplex LC/UPC or LC/APC with NSN Boot</td></tr>
-                <tr><th>Fiber Mode</th><td>Single-mode G.657.A2</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.3 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB (UPC) / ≥ 60 dB (APC)</td></tr>
-                <tr><th>Cable Diameter</th><td>2.0mm / 3.0mm</td></tr>
-                <tr><th>Boot Type</th><td>NSN-style angled boot for easy routing</td></tr>
-                <tr><th>Applications</th><td>High-density patch panels, data center, NSN equipment</td></tr>
-            </table>
-        </div>
-
-        <!-- CPRI LC -->
-        <div class="product-detail" id="tab-cpri">
-            <div class="product-header">
-                <div class="product-img"><img src="images/cpri.png" alt="CPRI LC Duplex Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>CPRI LC Cable Assemblies</h3>
-                    <p class="sub-products">
-                        FTTA CPRI cable assemblies for base station fiber connections between BBU and RRU, supporting CPRI protocol up to 10.1 Gbps.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>Duplex LC/UPC</td></tr>
-                <tr><th>Fiber Type</th><td>Single-mode G.657.A2</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB</td></tr>
-                <tr><th>Waterproof Rating</th><td>Optional IP67 boot</td></tr>
-                <tr><th>Cable Construction</th><td>Armored or LSZH outdoor jacket</td></tr>
-                <tr><th>Application</th><td>4G/5G CPRI links, BBU-RRU interconnection</td></tr>
-            </table>
-        </div>
-
-        <!-- PDLC -->
-        <div class="product-detail" id="tab-pdlc">
-            <div class="product-header">
-                <div class="product-img"><img src="images/pdlc.png" alt="PDLC Push-Pull Outdoor Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>PDLC Cable Assemblies</h3>
-                    <p class="sub-products">
-                        Push-pull PDLC connectors for high-density fiber management — ideal for data centers and telecom cabinets.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>PDLC Push-Pull LC Duplex</td></tr>
-                <tr><th>Fiber Type</th><td>Single-mode (SM) / Multi-mode (MM)</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.3 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB (UPC)</td></tr>
-                <tr><th>Polarity</th><td>A-B / A-A (configurable)</td></tr>
-                <tr><th>Cable Options</th><td>1.6mm / 2.0mm simplex, 2.0mm duplex</td></tr>
-                <tr><th>Applications</th><td>High-density patching, data center, FTTx</td></tr>
-            </table>
-        </div>
-
-        <!-- Universal Connector -->
-        <div class="product-detail" id="tab-universal">
-            <div class="product-header">
-                <div class="product-img"><img src="images/universal.png" alt="Universal Outdoor Waterproof Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>Universal TW Connector</h3>
-                    <p class="sub-products">
-                        Universal TW Connector for Huawei Mini SC Adapter and OPT Adapter — cross-compatible solution for telecom equipment.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>Universal TW (Mini SC / OPT compatible)</td></tr>
-                <tr><th>Compatibility</th><td>Huawei Mini SC adapter, OPT adapter</td></tr>
-                <tr><th>Fiber Type</th><td>Single-mode G.657.A2</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 60 dB (APC)</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP67</td></tr>
-                <tr><th>Applications</th><td>Huawei equipment, universal adapter panels</td></tr>
-            </table>
-        </div>
-
-        <!-- ODC Cable -->
-        <div class="product-detail" id="tab-odc">
-            <div class="product-header">
-                <div class="product-img"><img src="images/odc.png" alt="ODC Outdoor Fiber Optic Cable Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3>FTTA Waterproof ODC Connector Cable Assemblies</h3>
-                    <p class="sub-products">
-                        Outdoor ODC connectors designed for harsh environment FTTA applications — rugged, reliable, field-proven.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector Type</th><td>ODC (Outdoor connector)</td></tr>
-                <tr><th>Fiber Count</th><td>2 / 4 / 8 fibers</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 50 dB (UPC) / ≥ 60 dB (APC)</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP68</td></tr>
-                <tr><th>Operating Temperature</th><td>-40°C to +85°C</td></tr>
-                <tr><th>Mating Durability</th><td>≥ 500 cycles</td></tr>
-                <tr><th>Applications</th><td>FTTA, outdoor telecom, military, industrial</td></tr>
-            </table>
-        </div>
-
-        <!-- New Product -->
-        <div class="product-detail" id="tab-newprod" style="border-left: 3px solid #00A8E8;">
-            <div class="product-header">
-                <div class="product-img" style="background: linear-gradient(135deg, #E6F5FC 0%, #CCEDFA 100%);"><img src="images/newprod.png" alt="FullAXS-PDLC18 New Hybrid Fiber Optic Connector" loading="lazy"></div>
-                <div class="product-info">
-                    <h3 style="display:flex;align-items:center;gap:10px;">
-                        FullAXS-PDLC18 Simplex Patch Cord
-                        <span style="background:#00A8E8;color:#fff;font-size:0.7rem;padding:3px 10px;border-radius:50px;font-weight:600;">NEW</span>
-                    </h3>
-                    <p class="sub-products">
-                        FullAXS extension to PDLC18 simplex version, single mode A2 fiber, Ø4.8mm with aramid riser cable. Ideal for FTTA remote radio unit connections requiring extended reach.
-                    </p>
-                </div>
-            </div>
-            <table class="specs-table">
-                <tr><th>Connector A</th><td>FullAXS (outdoor, IP67)</td></tr>
-                <tr><th>Connector B</th><td>PDLC18 (simplex)</td></tr>
-                <tr><th>Fiber Type</th><td>Single-mode G.657.A2</td></tr>
-                <tr><th>Cable Type</th><td>Ø4.8mm outdoor cable with aramid riser</td></tr>
-                <tr><th>Insertion Loss</th><td>≤ 0.35 dB</td></tr>
-                <tr><th>Return Loss</th><td>≥ 60 dB (APC)</td></tr>
-                <tr><th>Waterproof Rating</th><td>IP67 (FullAXS end)</td></tr>
-                <tr><th>Applications</th><td>FTTA RRU connections, extended reach scenarios</td></tr>
-            </table>
-        </div>
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Product portfolio</div>
+      <h2>A complete hardware basket — with real depth in fiber</h2>
+      <p>Few trading houses position for operator support. We do: a full procurement basket anchored by a flagship line we have manufactured for over a decade.</p>
     </div>
+
+    <div class="flagship">
+      <div>
+        <div class="f-tag">Flagship · our core since day one</div>
+        <h3>Fiber Connectivity</h3>
+        <p>Patch cords, hardened FTTA/FTTx connectors, drop cables and PLC splitters — the line that earned our place on operator purchase lists, and the anchor of every consolidated order we run.</p>
+        <div class="f-chip">
+          <span>Fiber patch cords</span><span>FTTA &amp; FTTx connectors</span><span>Drop cables</span><span>PLC splitters</span><span>OEM &amp; ODM</span>
+        </div>
+      </div>
+      <div class="f-star">Deepest expertise<br>in this line —<br>manufactured 10+ years</div>
+    </div>
+
+    <div class="cat-grid">
+      <div class="cat">
+        <div class="c-tag">Access &amp; FTTH</div>
+        <h4>PON &amp; FTTx Access</h4>
+        <ul>
+          <li>PON OLT / ONT equipment</li>
+          <li>FTTH terminal &amp; splitter boxes</li>
+          <li class="g">ONU/ONT accessories</li>
+        </ul>
+      </div>
+      <div class="cat">
+        <div class="c-tag">Transmission &amp; Data Center</div>
+        <h4>Optical Modules</h4>
+        <ul>
+          <li>SFP / SFP+ / XFP transceivers</li>
+          <li>CWDM / DWDM modules</li>
+          <li class="g">Compatible with major switch brands</li>
+        </ul>
+      </div>
+      <div class="cat">
+        <div class="c-tag">Network &amp; Enterprise</div>
+        <h4>Network Equipment</h4>
+        <ul>
+          <li>Managed / unmanaged switches</li>
+          <li>Fiber media converters</li>
+          <li class="g">Patch panels &amp; racks</li>
+        </ul>
+      </div>
+      <div class="cat">
+        <div class="c-tag">Mobile &amp; 5G</div>
+        <h4>Mobile Site &amp; FTTA</h4>
+        <ul>
+          <li>FullAXS / ODVA / ODC assemblies</li>
+          <li>CPRI cable assemblies</li>
+          <li class="g">Hardened outdoor connectors</li>
+        </ul>
+      </div>
+      <div class="cat">
+        <div class="c-tag">Outside Plant</div>
+        <h4>OSP &amp; Field</h4>
+        <ul>
+          <li>OSP enclosures &amp; accessories</li>
+          <li>Custom cable assemblies</li>
+          <li class="g">Power &amp; connectivity parts</li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="matrix-table">
+      <thead>
+        <tr><th style="width:26%">Category</th><th style="width:44%">What we supply</th><th>Typical application</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Fiber connectivity</b> <span class="pill halo">Flagship</span></td>
+          <td>Patch cords (SC/LC, UPC/APC), FTTA &amp; FTTx hardened connectors, drop cables, PLC splitters, ODC/ODVA/FullAXS assemblies, custom OEM</td>
+          <td>Access networks, mobile sites, data centers, OSP deployments</td>
+        </tr>
+        <tr>
+          <td><b>Optical modules</b> <span class="pill basket">Basket</span></td>
+          <td>SFP, SFP+, XFP, CWDM/DWDM modules, compatible with major switch/router brands</td>
+          <td>Transmission, aggregation, backbone &amp; data center links</td>
+        </tr>
+        <tr>
+          <td><b>PON / OLT &amp; FTTH</b> <span class="pill basket">Basket</span></td>
+          <td>PON OLT / ONT, FTTH terminal &amp; splitter boxes, ONU accessories</td>
+          <td>FTTH/FTTB rollout programs</td>
+        </tr>
+        <tr>
+          <td><b>Network equipment</b> <span class="pill basket">Basket</span></td>
+          <td>Managed / unmanaged switches, media converters, patch panels, racks</td>
+          <td>Enterprise &amp; operator network build-out</td>
+        </tr>
+        <tr>
+          <td><b>Mobile site &amp; FTTA</b> <span class="pill basket">Basket</span></td>
+          <td>FullAXS / ODVA / ODC hardened assemblies, CPRI &amp; RRU cable assemblies, weatherproof outdoor connectors</td>
+          <td>5G / FTTA rollout, mobile fronthaul &amp; backhaul</td>
+        </tr>
+        <tr>
+          <td><b>OSP &amp; custom</b> <span class="pill basket">Basket</span></td>
+          <td>OSP enclosures, custom cable assemblies, labeling &amp; packaging to spec</td>
+          <td>Field deployment, rollout &amp; maintenance programs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<!-- ── Inquiry ── -->
-<section class="section section-alt" id="inquiry">
-    <div class="container">
-        <h2 class="section-title">Request a Quote</h2>
-        <p class="section-subtitle">Tell us your requirements — we'll respond within 24 hours</p>
-
-        <div class="inquiry-wrapper">
-            <form class="inquiry-form" id="inquiryForm" action="https://formspree.io/f/meoeykzp" method="POST">
-                <h3>Send an Inquiry</h3>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Your Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Company name">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone / WhatsApp</label>
-                        <input type="text" id="phone" name="phone" placeholder="+ country code + number">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="product">Product Interest *</label>
-                    <select id="product" name="product" required>
-                        <option value="">— Select a product line —</option>
-                        <option value="OptiTap">OptiTap Compatible Solutions</option>
-                        <option value="ODVA">ODVA Connector Series</option>
-                        <option value="FullAXS">FullAXS Connector Series</option>
-                        <option value="NSN Boot LC">NSN Boot Duplex LC</option>
-                        <option value="CPRI LC">CPRI LC Cable Assemblies</option>
-                        <option value="PDLC">PDLC Cable Assemblies</option>
-                        <option value="Universal">Universal TW Connector</option>
-                        <option value="ODC">ODC Cable Assemblies</option>
-                        <option value="FullAXS-PDLC18">FullAXS-PDLC18 (New)</option>
-                        <option value="Custom">Custom / Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="quantity">Estimated Quantity</label>
-                    <input type="text" id="quantity" name="quantity" placeholder="e.g. 100 pcs, 500 sets">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message / Requirements</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Please describe your requirements — connector type, cable length, fiber type, quantity, target delivery..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Inquiry</button>
-            </form>
-
-            <div class="contact-info" id="contact">
-                <h3>Contact Information</h3>
-                <div class="contact-item">
-                    <div class="ci-icon ic-blue">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <div>
-                        <strong>Email</strong>
-                        <span>sales@taisunop.com</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="ci-icon ic-teal">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    </div>
-                    <div>
-                        <strong>Phone / WeChat</strong>
-                        <span>+86 180 2877 5069</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="ci-icon ic-orange">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <div>
-                        <strong>Factory Address</strong>
-                        <span>1403B, East Tower, Coast Mansion, No.15 Haide 3rd Rd, Yuehai Subdistrict, Nanshan, Shenzhen, China</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="ci-icon ic-purple">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <div>
-                        <strong>Website</strong>
-                        <span>www.taisunop.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="how" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How we serve operators</div>
+      <h2>From BOM to delivered goods, run as one line</h2>
+      <p>Behind every consolidated order is a repeatable operating rhythm — the reason operator buyers keep one number on speed dial.</p>
     </div>
+    <div class="how-grid">
+      <div class="how">
+        <div class="n">01</div>
+        <h4>Consolidate</h4>
+        <p>Send us your BOM. We quote the full basket in one document — no cherry-picking, no hidden lines.</p>
+      </div>
+      <div class="how">
+        <div class="n">02</div>
+        <h4>Source &amp; test</h4>
+        <p>Factory allocation in Shenzhen, then every line tested to spec with reports you can audit.</p>
+      </div>
+      <div class="how">
+        <div class="n">03</div>
+        <h4>Document</h4>
+        <p>Spec sheets, test reports and customs-friendly paperwork ready before goods move.</p>
+      </div>
+      <div class="how">
+        <div class="n">04</div>
+        <h4>Deliver</h4>
+        <p>One shipment, consolidated packaging, worldwide delivery with full tracking.</p>
+      </div>
+      <div class="how">
+        <div class="n">05</div>
+        <h4>Support</h4>
+        <p>After-sales response, re-order continuity and forecast-based capacity for repeat programs.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ── Footer ── -->
+<section id="about">
+  <div class="wrap why">
+    <div>
+      <div class="kicker" style="font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px">Why operators trust Taisun</div>
+      <h2>Ten years in the operator supply chain — on both sides of the table</h2>
+      <p class="sub">We built our reputation supplying operators and their contractors, so we know what your procurement, engineering and field teams need before you have to explain it.</p>
+      <div>
+        <div class="check"><span class="ok">✓</span><div><b>10+ years with operators</b><p>A decade of FTTA, FTTx and transmission programs — not a newcomer chasing volume.</p></div></div>
+        <div class="check"><span class="ok">✓</span><div><b>ISO 9001 certified supply chain</b><p>Manufacturing partners audited and certified; test reports delivered with every order.</p></div></div>
+        <div class="check"><span class="ok">✓</span><div><b>OEM / ODM without minimum-order pain</b><p>Custom lengths, connectors, labeling and packaging — low MOQs for samples and trial runs.</p></div></div>
+        <div class="check"><span class="ok">✓</span><div><b>At the source in Shenzhen</b><p>We sit inside the world's largest optical supply cluster, so consolidation is our native advantage.</p></div></div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <h3>Operator relationships, not transactions</h3>
+      <p class="q">The pattern we build for every long-term customer:</p>
+      <div class="wv-row"><span class="yr">Year 1</span><span>First basket — connectivity + modules, qualified and shipped</span></div>
+      <div class="wv-row"><span class="yr">Year 2</span><span>BOM expands — PON, FTTH boxes, switches join the program</span></div>
+      <div class="wv-row"><span class="yr">Year 3+</span><span>Your trusted one-stop line — forecast allocation, priority capacity</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="soft" style="border-bottom:none">
+  <div class="wrap">
+    <div class="contact-cta">
+      <h2>Put your next BOM on one order</h2>
+      <p>Send us your hardware list, or request our capability list first. We reply within one business day — with a consolidated quotation, not a sales pitch.</p>
+      <a class="big-mail" href="mailto:sales@taisunop.com">sales@taisunop.com</a><br>
+      <div style="margin:14px 0 22px;font-size:15px;color:#cfe0f2">Phone / WhatsApp / WeChat: <a href="https://wa.me/8618028775069" style="color:#fff;font-weight:600">+86 180 2877 5069</a></div>
+      <a href="mailto:sales@taisunop.com?subject=Request%20capability%20list%20-%20operator%20hardware" class="btn ghost">Email us today</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-    <div class="container">
-        <div class="footer-brand">
-            <h4 style="display:flex;align-items:center;gap:8px;">
-                <svg viewBox="0 0 32 32" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="4,28 18,4 32,28" fill="url(#flg)"/>
-                    <defs><linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00A8E8"/><stop offset="100%" stop-color="#0055A4"/></linearGradient></defs>
-                </svg>
-                Taisun Optical
-            </h4>
-            <p>Shenzhen Taisun Optical Technology Co., Ltd. — Professional FTTA and fiber optic connectivity solutions supplier. Quality you can trust, service you can rely on.</p>
-        </div>
-        <div class="footer-links">
-            <div>
-                <h4>Products</h4>
-                <ul>
-                    <li><a href="#products" onclick="document.querySelector('[data-tab=optitap]').click()">OptiTap</a></li>
-                    <li><a href="#products" onclick="document.querySelector('[data-tab=odva]').click()">ODVA Series</a></li>
-                    <li><a href="#products" onclick="document.querySelector('[data-tab=fullaxs]').click()">FullAXS Series</a></li>
-                    <li><a href="#products" onclick="document.querySelector('[data-tab=odc]').click()">ODC Cable</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="solution.html">Solutions</a></li>
-                    <li><a href="company.html">Company</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="color:#fff">
+        <span class="dot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 12h5l3-7 4 14 3-7h1"/></svg>
+        </span>
+        <span>Taisun Optical</span>
+      </div>
+      <p class="about">One-stop hardware supply for telecom operators — fiber connectivity, PON, transmission and access hardware, coordinated from Shenzhen and delivered worldwide.</p>
     </div>
-    <div class="footer-bottom container">
-        &copy; 2026 Shenzhen Taisun Optical Technology Co., Ltd. All rights reserved.
+    <div>
+      <h5>Products</h5>
+      <a href="#products">Fiber connectivity</a>
+      <a href="#products">Optical modules</a>
+      <a href="#products">PON / OLT &amp; FTTH</a>
+      <a href="#products">Network equipment</a>
+      <a href="#products">Mobile site &amp; FTTA</a>
+      <a href="#products">OSP &amp; field</a>
     </div>
+    <div>
+      <h5>Contact</h5>
+      <a href="mailto:sales@taisunop.com">sales@taisunop.com</a>
+      <a href="https://wa.me/8618028775069">+86 180 2877 5069 (WhatsApp / WeChat)</a>
+      <a href="#contact">Request capability list</a>
+      <a href="#about">About Taisun</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">© 2026 Shenzhen Taisun Optical Technology Co., Ltd. · Operator-grade hardware, one-stop supply</div>
+  </div>
 </footer>
-
-<!-- ── Product Tab JS ── -->
-<script>
-(function() {
-    const tabs = document.querySelectorAll('.product-tab');
-    const details = document.querySelectorAll('.product-detail');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.dataset.tab;
-            // Update tabs
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            // Update content
-            details.forEach(d => d.classList.remove('active'));
-            const detail = document.getElementById('tab-' + target);
-            if (detail) detail.classList.add('active');
-            // Scroll to products if on mobile
-            if (window.innerWidth < 768) {
-                document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Form submission handling
-    const form = document.getElementById('inquiryForm');
-    form.addEventListener('submit', function(e) {
-        // Formspree will handle it, but let's add a nice touch
-        // If Formspree endpoint not configured, fall back to mailto:
-        const formspreeEndpoint = 'https://formspree.io/f/meoeykzp';
-        if (formspreeEndpoint.includes('YOUR_FORM_ID')) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const product = document.getElementById('product').value;
-            const message = document.getElementById('message').value;
-            const phone = document.getElementById('phone').value;
-            const quantity = document.getElementById('quantity').value;
-            const company = document.getElementById('company').value;
-
-            const subject = encodeURIComponent('Inquiry: ' + product + ' - from ' + name);
-            const body = encodeURIComponent(
-                'Name: ' + name + '\n' +
-                'Company: ' + company + '\n' +
-                'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n' +
-                'Product: ' + product + '\n' +
-                'Quantity: ' + quantity + '\n\n' +
-                'Message:\n' + message
-            );
-            window.location.href = 'mailto:sales@taisunop.com?subject=' + subject + '&body=' + body;
-        }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-})();
-</script>
 
 </body>
 </html>

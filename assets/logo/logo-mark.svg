@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Taisun Optical mark">
+  <rect x="4" y="18" width="44" height="9" rx="4.5" fill="#0b2a4a"/>
+  <rect x="21.5" y="18" width="9" height="36" rx="4.5" fill="#0b2a4a"/>
+  <path d="M7 51 L45 26" stroke="#12b8a6" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="26" cy="39" r="3.2" fill="#12b8a6"/>
+</svg>

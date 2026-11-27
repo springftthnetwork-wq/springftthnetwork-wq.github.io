@@ -3,478 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taisun Optical — One-Stop Hardware Partner for Telecom Operators</title>
-<meta name="description" content="Shenzhen Taisun Optical Technology Co., Ltd. — one-stop operator passive &amp; active fiber optic products supplier. 10+ years supplying fiber connectivity, PON, transmission and access hardware, sourced, tested and delivered as a single coordinated order.">
-<style>
-:root{
-  --navy:#0b2a4a; --navy-2:#123c66; --blue:#1f6feb; --blue-d:#1758c4;
-  --teal:#0f766e; --teal-l:#e8f5f3;
-  --ink:#16212e; --muted:#5a6b7c; --line:#e3e9f0;
-  --bg:#ffffff; --bg-soft:#f6f9fc; --bg-navy:#0b2a4a;
-  --radius:14px;
-  --shadow:0 1px 2px rgba(11,42,74,.05), 0 8px 24px rgba(11,42,74,.06);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-a{color:var(--blue);text-decoration:none}
-img{max-width:100%}
-
-/* ---------- top bar ---------- */
-.topbar{background:var(--navy);color:#cfe0f2;font-size:13px}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
-.topbar a{color:#cfe0f2}
-.topbar a:hover{color:#fff}
-
-/* ---------- nav ---------- */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--navy);letter-spacing:.2px}
-.logo .dot{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center}
-.logo .dot svg{width:18px;height:18px}
-.logo small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.4px;line-height:1.2}
-nav.menu{display:flex;gap:28px;align-items:center}
-nav.menu a{color:var(--ink);font-size:15px;font-weight:500}
-nav.menu a:hover{color:var(--blue)}
-.btn{display:inline-block;background:var(--blue);color:#fff!important;padding:10px 20px;border-radius:9px;font-weight:600;font-size:15px;transition:background .15s}
-.btn:hover{background:var(--blue-d)}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.45);color:#fff!important}
-.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn.dark{background:var(--navy);color:#fff!important}
-.btn.dark:hover{background:var(--navy-2)}
-.burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
-.burger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px}
-
-/* ---------- hero ---------- */
-.hero{background:
-  radial-gradient(1000px 400px at 85% -10%, rgba(31,111,235,.10), transparent 60%),
-  radial-gradient(800px 380px at -10% 110%, rgba(15,118,110,.10), transparent 60%),
-  var(--bg-soft);
-  border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;padding-top:84px;padding-bottom:84px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f1fe;color:var(--blue-d);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:22px}
-.eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--teal)}
-.hero h1{font-size:44px;line-height:1.18;letter-spacing:-.5px;color:var(--navy);font-weight:800;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--blue)}
-.hero p.lead{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:32px}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
-.metrics{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
-.metrics .m b{display:block;font-size:26px;color:var(--navy);font-weight:800;letter-spacing:-.3px}
-.metrics .m span{font-size:13.5px;color:var(--muted)}
-.hero-visual{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
-.hero-visual .hv-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.hero-visual .hv-head b{font-size:15px;color:var(--navy)}
-.hero-visual .hv-head span{font-size:12px;color:var(--muted);background:var(--bg-soft);padding:3px 10px;border-radius:999px}
-.hv-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:14px;background:var(--bg)}
-.hv-row .tag{font-size:11px;font-weight:700;color:var(--blue-d);background:#e8f1fe;padding:2px 8px;border-radius:6px;white-space:nowrap}
-.hv-row .tag.green{color:var(--teal);background:var(--teal-l)}
-.hv-row .bar{flex:1;height:6px;background:#eef2f7;border-radius:3px;overflow:hidden}
-.hv-row .bar i{display:block;height:100%;border-radius:3px}
-.hv-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px}
-
-/* ---------- sections ---------- */
-section{padding:84px 0}
-section.soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.sec-head{max-width:720px;margin-bottom:48px}
-.sec-head .kicker{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
-.sec-head h2{font-size:32px;line-height:1.25;color:var(--navy);letter-spacing:-.3px;font-weight:800;margin-bottom:14px}
-.sec-head p{font-size:16.5px;color:var(--muted)}
-
-/* ---------- value props ---------- */
-.vp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.vp-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:box-shadow .2s,border-color .2s}
-.vp-card:hover{box-shadow:var(--shadow);border-color:#c9d6e5}
-.vp-card .ic{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:#e8f1fe}
-.vp-card .ic.teal{background:var(--teal-l)}
-.vp-card .ic svg{width:22px;height:22px}
-.vp-card h3{font-size:17px;color:var(--navy);font-weight:700;margin-bottom:8px}
-.vp-card p{font-size:14.5px;color:var(--muted)}
-
-/* ---------- products ---------- */
-.flagship{background:var(--navy);border-radius:18px;color:#fff;padding:34px 36px;display:flex;justify-content:space-between;align-items:center;gap:28px;margin-bottom:40px;flex-wrap:wrap}
-.flagship .f-tag{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#7fd1e8;margin-bottom:10px}
-.flagship h3{font-size:24px;font-weight:800;margin-bottom:8px;letter-spacing:-.2px}
-.flagship p{font-size:14.5px;color:#cfe0f2;max-width:560px}
-.flagship .f-chip{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.flagship .f-chip span{font-size:12.5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:5px 12px;border-radius:999px;color:#eaf3fb}
-.flagship .f-star{font-size:13px;font-weight:600;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:12px 20px;border-radius:12px;text-align:center;max-width:230px;color:#fff}
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px}
-.cat{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.cat:hover{box-shadow:var(--shadow)}
-.cat .c-tag{font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
-.cat h4{font-size:16px;color:var(--navy);font-weight:700;margin-bottom:8px}
-.cat ul{list-style:none}
-.cat li{font-size:13.5px;color:var(--muted);padding:4px 0 4px 16px;position:relative}
-.cat li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
-.cat li.g::before{background:var(--teal)}
-.matrix-table{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.matrix-table th{background:var(--bg-soft);text-align:left;font-size:13px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);padding:14px 18px;border-bottom:1px solid var(--line);font-weight:700}
-.matrix-table td{padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line);vertical-align:top}
-.matrix-table tr:last-child td{border-bottom:none}
-.matrix-table td b{color:var(--navy)}
-.matrix-table td .pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;margin:2px 4px 2px 0}
-.pill.halo{background:#e8f1fe;color:var(--blue-d)}
-.pill.basket{background:var(--teal-l);color:var(--teal)}
-
-/* ---------- how we serve ---------- */
-.how-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.how{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px}
-.how .n{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:8px}
-.how h4{font-size:15px;color:var(--navy);font-weight:700;margin-bottom:6px}
-.how p{font-size:13px;color:var(--muted)}
-
-/* ---------- why us ---------- */
-.why{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.why h2{font-size:30px;color:var(--navy);font-weight:800;letter-spacing:-.3px;margin-bottom:16px}
-.why .sub{font-size:16px;color:var(--muted);margin-bottom:26px}
-.check{display:flex;gap:12px;padding:11px 0;align-items:flex-start}
-.check .ok{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--teal-l);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;margin-top:2px}
-.check b{color:var(--navy);font-size:15px;font-weight:600}
-.check p{font-size:14px;color:var(--muted)}
-.why-visual{background:var(--navy);color:#fff;border-radius:18px;padding:34px;position:relative;overflow:hidden}
-.why-visual::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(31,111,235,.25);top:-90px;right:-90px}
-.why-visual h3{font-size:20px;font-weight:800;margin-bottom:6px;position:relative;z-index:1}
-.why-visual .q{font-size:14.5px;color:#cfe0f2;margin-bottom:24px;position:relative;z-index:1}
-.wv-row{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;position:relative;z-index:1}
-.wv-row:last-child{border-bottom:none}
-.wv-row .yr{font-weight:800;color:#7fd1e8;min-width:52px}
-.wv-row span{color:#eaf3fb}
-
-/* ---------- contact ---------- */
-.contact-cta{background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:20px;padding:56px;text-align:center;color:#fff}
-.contact-cta h2{font-size:30px;font-weight:800;margin-bottom:12px;letter-spacing:-.3px}
-.contact-cta p{font-size:16px;color:#cfe0f2;max-width:620px;margin:0 auto 28px}
-.contact-cta .big-mail{font-size:20px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:12px 26px;border-radius:12px;display:inline-block;margin-bottom:16px}
-
-/* ---------- footer ---------- */
-footer{background:var(--bg-navy);color:#9db4cc;font-size:13.5px}
-footer .wrap{padding:44px 24px 30px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
-footer h5{color:#fff;font-size:14px;margin-bottom:14px;font-weight:700}
-footer a{color:#9db4cc;display:block;padding:4px 0}
-footer a:hover{color:#fff}
-footer p.about{max-width:340px;margin-top:12px;line-height:1.7}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;text-align:center;font-size:12.5px;color:#7c93ad}
-
-@media(max-width:960px){
-  .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:56px;gap:36px}
-  .hero h1{font-size:34px}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .how-grid{grid-template-columns:repeat(2,1fr)}
-  .why{grid-template-columns:1fr}
-  footer .wrap{grid-template-columns:1fr}
-}
-@media(max-width:640px){
-  nav.menu{display:none}
-  .burger{display:block}
-  .vp-grid,.cat-grid,.how-grid{grid-template-columns:1fr}
-  .metrics{gap:20px}
-  .contact-cta{padding:40px 24px}
-}
-</style>
+<title>Taisun Optical | Optical Transceiver Factory — 10G to 800G</title>
+<meta name="description" content="Shenzhen-based optical module factory. SFP, SFP28, QSFP28, QSFP56, QSFP-DD and OSFP transceivers from 10G to 800G, plus AOC and DAC cables. Published specifications, batch test reports, OEM labeling.">
+<meta name="keywords" content="optical module factory, optical transceiver manufacturer, SFP+ SFP28 QSFP28 QSFP-DD OSFP, 100G 400G 800G transceivers, AOC DAC cables, Shenzhen">
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div class="topbar"><div class="wrap"><span>Shenzhen optical transceiver factory · 10G → 800G</span><span><b>Factory direct</b> · OEM / ODM welcome</span></div></div>
+<header class="nav"><div class="wrap">
+  <a href="index.html" class="logo" aria-label="Taisun Optical home"><img src="assets/logo/logo.svg" alt="Taisun Optical"></a>
+  <nav class="menu" id="menu">
+    <a href="#families">Product lines</a>
+    <a href="#capability">Factory</a>
+    <a href="#quality">Quality</a>
+    <a href="products.html">Full catalog</a>
+    <a href="#contact" class="btn teal">Request a quote</a>
+  </nav>
+  <button class="burger" aria-label="Toggle menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div></header>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>One-stop operator passive &amp; active fiber optic products supplier · Shenzhen, China</span>
-    <a href="mailto:sales@taisunop.com">sales@taisunop.com</a>
-  </div>
-</div>
-
-<header class="nav">
-  <div class="wrap">
-    <div class="logo">
-      <span class="dot">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 12h5l3-7 4 14 3-7h1"/></svg>
-      </span>
-      <span>Taisun Optical<small>Operator hardware · one-stop supply</small></span>
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow"><i></i> Optical module manufacturer · Shenzhen</span>
+    <h1>Optical modules, <em>built and tested</em> at the source.</h1>
+    <p class="lead">From 10G SFP+ to 800G OSFP — we manufacture transceivers and AOC/DAC cables with published specifications, batch-level test reports and your own label. No trading layer between you and the module.</p>
+    <div class="cta">
+      <a href="products.html" class="btn">Explore the catalog →</a>
+      <a href="#contact" class="btn ghost">Request a quote</a>
     </div>
-    <nav class="menu">
-      <a href="#why">Why operators</a>
-      <a href="#products">Products</a>
-      <a href="#how">How we serve</a>
-      <a href="#about">Why us</a>
-      <a href="#contact" class="btn">Request capability list</a>
-    </nav>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow"><span class="pulse"></span>Positioned for telecom operators — not one-off traders</span>
-      <h1>The one-stop hardware partner <em>operators</em> actually trust</h1>
-      <p class="lead">Ten years of supplying operators across access, transport and mobile networks. One point of contact for fiber connectivity, PON, transmission and access hardware — sourced, tested and delivered as a single coordinated order.</p>
-      <div class="cta">
-        <a href="#contact" class="btn">Get our capability list</a>
-        <a href="#products" class="btn ghost dark" style="border-color:var(--navy);color:var(--navy)!important">Explore product range</a>
-      </div>
-      <div class="metrics">
-        <div class="m"><b>10+</b><span>years serving operators</span></div>
-        <div class="m"><b>30+</b><span>markets supplied</span></div>
-        <div class="m"><b>ISO 9001</b><span>certified supply chain</span></div>
-        <div class="m"><b>1 PO</b><span>one partner, one shipment</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hv-head"><b>One order, one partner</b><span>Live example</span></div>
-      <div class="hv-row"><span class="tag">SFP+ transceivers</span><div class="bar"><i style="width:88%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">12,000 pcs</span></div>
-      <div class="hv-row"><span class="tag green">Fiber patch cords</span><div class="bar"><i style="width:96%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">4,800 pcs</span></div>
-      <div class="hv-row"><span class="tag">PON OLT &amp; ONT</span><div class="bar"><i style="width:74%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">620 units</span></div>
-      <div class="hv-row"><span class="tag green">PLC splitters</span><div class="bar"><i style="width:82%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">9,300 pcs</span></div>
-      <div class="hv-row"><span class="tag">Media converters</span><div class="bar"><i style="width:66%;background:#1f6feb"></i></div><span style="font-size:12px;color:var(--muted)">1,150 units</span></div>
-      <div class="hv-row"><span class="tag green">FTTH boxes</span><div class="bar"><i style="width:90%;background:#0f766e"></i></div><span style="font-size:12px;color:var(--muted)">2,700 units</span></div>
-      <p class="hv-note">A real blended order, coordinated by one team — one quote, one QC pass, one shipment.</p>
+    <div class="metrics">
+      <div><b>10G–800G</b><span>Speed range</span></div>
+      <div><b>SFP → OSFP</b><span>All major form factors</span></div>
+      <div><b>100%</b><span>Units tested before shipment</span></div>
     </div>
   </div>
-</section>
+  <aside class="hero-card" aria-label="Catalog overview">
+    <div class="hc-head"><b>Transceiver coverage</b><small>Updated 2026</small></div>
+    <div class="hc-row"><span class="k">10G / 25G</span><span class="bar"><i style="width:92%"></i></span><span class="v">SFP+ · SFP28</span></div>
+    <div class="hc-row"><span class="k">40G / 100G</span><span class="bar"><i style="width:84%"></i></span><span class="v">QSFP+ · QSFP28</span></div>
+    <div class="hc-row"><span class="k">200G</span><span class="bar"><i style="width:66%"></i></span><span class="v">QSFP56 · QSFP112</span></div>
+    <div class="hc-row"><span class="k">400G</span><span class="bar"><i style="width:78%"></i></span><span class="v">QSFP-DD · OSFP</span></div>
+    <div class="hc-row"><span class="k">800G</span><span class="bar"><i style="width:58%"></i></span><span class="v">OSFP · QSFP-DD</span></div>
+    <div class="hc-row"><span class="k">DAC / AOC</span><span class="bar"><i style="width:50%"></i></span><span class="v">Direct-attach cables</span></div>
+    <div class="hc-foot">Full parameters available on the product pages</div>
+  </aside>
+</div></section>
 
-<section id="why" class="soft">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">Why operators work with us</div>
-      <h2>Built for the way operators actually buy</h2>
-      <p>Most traders sell products. We run your hardware procurement as one program — so your teams stop chasing a dozen vendors and start receiving a single coordinated supply line.</p>
-    </div>
-    <div class="vp-grid">
-      <div class="vp-card">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
-        <h3>One PO, one partner</h3>
-        <p>Consolidate fiber connectivity, modules, PON and access hardware into a single order with one quotation, one QC process and one shipment schedule. Fewer vendors, fewer gaps, fewer headaches for your procurement team.</p>
-      </div>
-      <div class="vp-card">
-        <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Operator-grade QA</h3>
-        <p>Every line is tested to published spec — insertion loss, return loss, IP67/IP68 waterproofing — with full test reports and compliance documentation delivered with your goods.</p>
-      </div>
-      <div class="vp-card">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h3>Continuity you can plan on</h3>
-        <p>Stable supply, consistent lead times and transparent order status across every category. We hold capacity with manufacturing partners in Shenzhen — the heart of the global optical supply chain.</p>
-      </div>
-      <div class="vp-card">
-        <div class="ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
-        <h3>We speak procurement</h3>
-        <p>Spec sheets, compliance files, packaging to your standards, customs-friendly documentation. Your team gets what it needs to approve, import and deploy without friction.</p>
-      </div>
-    </div>
+<section id="families"><div class="wrap">
+  <div class="sec-head">
+    <span class="kicker">Product lines</span>
+    <h2>One factory, every speed you deploy</h2>
+    <p class="sub">Every line is built to MSA / IEEE specifications and shipped with a test report. Choose a family to see exact reach, wavelength, connector and operating range.</p>
   </div>
-</section>
-
-<section id="products">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">Product portfolio</div>
-      <h2>A complete hardware basket — with real depth in fiber</h2>
-      <p>Few trading houses position for operator support. We do: a full procurement basket anchored by a flagship line we have manufactured for over a decade.</p>
-    </div>
-
-    <div class="flagship">
-      <div>
-        <div class="f-tag">Flagship · our core since day one</div>
-        <h3>Fiber Connectivity</h3>
-        <p>Patch cords, hardened FTTA/FTTx connectors, drop cables and PLC splitters — the line that earned our place on operator purchase lists, and the anchor of every consolidated order we run.</p>
-        <div class="f-chip">
-          <span>Fiber patch cords</span><span>FTTA &amp; FTTx connectors</span><span>Drop cables</span><span>PLC splitters</span><span>OEM &amp; ODM</span>
-        </div>
-      </div>
-      <div class="f-star">Deepest expertise<br>in this line —<br>manufactured 10+ years</div>
-    </div>
-
-    <div class="cat-grid">
-      <div class="cat">
-        <div class="c-tag">Access &amp; FTTH</div>
-        <h4>PON &amp; FTTx Access</h4>
-        <ul>
-          <li>PON OLT / ONT equipment</li>
-          <li>FTTH terminal &amp; splitter boxes</li>
-          <li class="g">ONU/ONT accessories</li>
-        </ul>
-      </div>
-      <div class="cat">
-        <div class="c-tag">Transmission &amp; Data Center</div>
-        <h4>Optical Modules</h4>
-        <ul>
-          <li>SFP / SFP+ / XFP transceivers</li>
-          <li>CWDM / DWDM modules</li>
-          <li class="g">Compatible with major switch brands</li>
-        </ul>
-      </div>
-      <div class="cat">
-        <div class="c-tag">Network &amp; Enterprise</div>
-        <h4>Network Equipment</h4>
-        <ul>
-          <li>Managed / unmanaged switches</li>
-          <li>Fiber media converters</li>
-          <li class="g">Patch panels &amp; racks</li>
-        </ul>
-      </div>
-      <div class="cat">
-        <div class="c-tag">Mobile &amp; 5G</div>
-        <h4>Mobile Site &amp; FTTA</h4>
-        <ul>
-          <li>FullAXS / ODVA / ODC assemblies</li>
-          <li>CPRI cable assemblies</li>
-          <li class="g">Hardened outdoor connectors</li>
-        </ul>
-      </div>
-      <div class="cat">
-        <div class="c-tag">Outside Plant</div>
-        <h4>OSP &amp; Field</h4>
-        <ul>
-          <li>OSP enclosures &amp; accessories</li>
-          <li>Custom cable assemblies</li>
-          <li class="g">Power &amp; connectivity parts</li>
-        </ul>
-      </div>
-    </div>
-
-    <table class="matrix-table">
-      <thead>
-        <tr><th style="width:26%">Category</th><th style="width:44%">What we supply</th><th>Typical application</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Fiber connectivity</b> <span class="pill halo">Flagship</span></td>
-          <td>Patch cords (SC/LC, UPC/APC), FTTA &amp; FTTx hardened connectors, drop cables, PLC splitters, ODC/ODVA/FullAXS assemblies, custom OEM</td>
-          <td>Access networks, mobile sites, data centers, OSP deployments</td>
-        </tr>
-        <tr>
-          <td><b>Optical modules</b> <span class="pill basket">Basket</span></td>
-          <td>SFP, SFP+, XFP, CWDM/DWDM modules, compatible with major switch/router brands</td>
-          <td>Transmission, aggregation, backbone &amp; data center links</td>
-        </tr>
-        <tr>
-          <td><b>PON / OLT &amp; FTTH</b> <span class="pill basket">Basket</span></td>
-          <td>PON OLT / ONT, FTTH terminal &amp; splitter boxes, ONU accessories</td>
-          <td>FTTH/FTTB rollout programs</td>
-        </tr>
-        <tr>
-          <td><b>Network equipment</b> <span class="pill basket">Basket</span></td>
-          <td>Managed / unmanaged switches, media converters, patch panels, racks</td>
-          <td>Enterprise &amp; operator network build-out</td>
-        </tr>
-        <tr>
-          <td><b>Mobile site &amp; FTTA</b> <span class="pill basket">Basket</span></td>
-          <td>FullAXS / ODVA / ODC hardened assemblies, CPRI &amp; RRU cable assemblies, weatherproof outdoor connectors</td>
-          <td>5G / FTTA rollout, mobile fronthaul &amp; backhaul</td>
-        </tr>
-        <tr>
-          <td><b>OSP &amp; custom</b> <span class="pill basket">Basket</span></td>
-          <td>OSP enclosures, custom cable assemblies, labeling &amp; packaging to spec</td>
-          <td>Field deployment, rollout &amp; maintenance programs</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="grid g3">
+    <article class="fam"><div class="pic"><img src="assets/images/sfp-10g-sr.jpg" alt="10G SFP+ optical transceiver"></div><div class="body"><span class="tag navy">10G · 25G</span><h3>SFP+ / SFP28</h3><p>SR, LR, BiDi and long-reach variants for access, aggregation and enterprise links.</p><div class="kv">850 nm VCSEL · 1310 nm DFB · Duplex LC</div><a class="more" href="products.html">View models →</a></div></article>
+    <article class="fam"><div class="pic"><img src="assets/images/qsfp28-100g-sr4.jpg" alt="100G QSFP28 optical transceiver"></div><div class="body"><span class="tag navy">40G · 100G</span><h3>QSFP+ / QSFP28</h3><p>SR4, LR4, CWDM4, ER4, DR1 and FR1 for data centers and carrier transport.</p><div class="kv">70 m OM3 → 100 km SMF · MPO / LC</div><a class="more" href="products.html">View models →</a></div></article>
+    <article class="fam"><div class="pic"><img src="assets/images/qsfp56-200g-sr4.jpg" alt="200G QSFP56 optical transceiver"></div><div class="body"><span class="tag navy">200G</span><h3>QSFP56 / QSFP112</h3><p>100G-per-lane PAM4 modules for high-density data center fabric.</p><div class="kv">SR4 · FR4 · LR4 · SR2 · 2–10 km SMF</div><a class="more" href="products.html">View models →</a></div></article>
+    <article class="fam"><div class="pic"><img src="assets/images/qdd-400g-sr8.jpg" alt="400G QSFP-DD optical transceiver"></div><div class="body"><span class="tag navy">400G</span><h3>QSFP-DD / OSFP</h3><p>SR4, SR8, DR4, FR4, LR4 and ER8 for AI / cloud infrastructure.</p><div class="kv">100 m MMF → 40 km SMF · MPO-12 / MPO-16</div><a class="more" href="products.html">View models →</a></div></article>
+    <article class="fam"><div class="pic"><img src="assets/images/osfp-800g-sr8.jpg" alt="800G OSFP optical transceiver"></div><div class="body"><span class="tag navy">800G</span><h3>OSFP / QSFP-DD 800G</h3><p>SR8, DR8 and LPO variants for next-generation 800G switching platforms.</p><div class="kv">8 × 106.25 Gbps PAM4 · up to 500 m SMF</div><a class="more" href="products.html">View models →</a></div></article>
+    <article class="fam"><div class="pic"><img src="assets/images/qsfp28-dac.jpg" alt="QSFP28 DAC copper cable"></div><div class="body"><span class="tag navy">DAC / AOC</span><h3>Direct-attach cables</h3><p>Passive copper DAC and active optical cables in 25G, 100G and 400G.</p><div class="kv">0.5–100 m · custom lengths · factory terminated</div><a class="more" href="products.html">View models →</a></div></article>
   </div>
-</section>
+</div></section>
 
-<section id="how" class="soft">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">How we serve operators</div>
-      <h2>From BOM to delivered goods, run as one line</h2>
-      <p>Behind every consolidated order is a repeatable operating rhythm — the reason operator buyers keep one number on speed dial.</p>
-    </div>
-    <div class="how-grid">
-      <div class="how">
-        <div class="n">01</div>
-        <h4>Consolidate</h4>
-        <p>Send us your BOM. We quote the full basket in one document — no cherry-picking, no hidden lines.</p>
-      </div>
-      <div class="how">
-        <div class="n">02</div>
-        <h4>Source &amp; test</h4>
-        <p>Factory allocation in Shenzhen, then every line tested to spec with reports you can audit.</p>
-      </div>
-      <div class="how">
-        <div class="n">03</div>
-        <h4>Document</h4>
-        <p>Spec sheets, test reports and customs-friendly paperwork ready before goods move.</p>
-      </div>
-      <div class="how">
-        <div class="n">04</div>
-        <h4>Deliver</h4>
-        <p>One shipment, consolidated packaging, worldwide delivery with full tracking.</p>
-      </div>
-      <div class="how">
-        <div class="n">05</div>
-        <h4>Support</h4>
-        <p>After-sales response, re-order continuity and forecast-based capacity for repeat programs.</p>
-      </div>
-    </div>
+<section class="soft" id="capability"><div class="wrap">
+  <div class="sec-head"><span class="kicker">Why factory direct</span><h2>What you get when the module comes from the line</h2><p class="sub">We are a Shenzhen optical module factory, not a catalog reseller. Parameters, labeling and test data stay consistent from sample to volume.</p></div>
+  <div class="grid g4">
+    <div class="feature"><div class="ico">01</div><h3>Spec-matched quotation</h3><p>Send the switch platform, reach and fiber type. We quote the exact module variant — not a "similar" part.</p></div>
+    <div class="feature"><div class="ico">02</div><h3>Batch consistency</h3><p>Same BOM, same firmware and same test limits across repeat orders. Re-orders behave like the qualified sample.</p></div>
+    <div class="feature"><div class="ico">03</div><h3>Test report with every lot</h3><p>TX power, RX sensitivity, DOM and link verification data delivered with the goods, ready for your QA file.</p></div>
+    <div class="feature"><div class="ico">04</div><h3>OEM / ODM labeling</h3><p>Your brand, part number, label layout and packaging. Sample and pilot quantities welcome before volume.</p></div>
   </div>
-</section>
+</div></section>
 
-<section id="about">
-  <div class="wrap why">
-    <div>
-      <div class="kicker" style="font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px">Why operators trust Taisun</div>
-      <h2>Ten years in the operator supply chain — on both sides of the table</h2>
-      <p class="sub">We built our reputation supplying operators and their contractors, so we know what your procurement, engineering and field teams need before you have to explain it.</p>
-      <div>
-        <div class="check"><span class="ok">✓</span><div><b>10+ years with operators</b><p>A decade of FTTA, FTTx and transmission programs — not a newcomer chasing volume.</p></div></div>
-        <div class="check"><span class="ok">✓</span><div><b>ISO 9001 certified supply chain</b><p>Manufacturing partners audited and certified; test reports delivered with every order.</p></div></div>
-        <div class="check"><span class="ok">✓</span><div><b>OEM / ODM without minimum-order pain</b><p>Custom lengths, connectors, labeling and packaging — low MOQs for samples and trial runs.</p></div></div>
-        <div class="check"><span class="ok">✓</span><div><b>At the source in Shenzhen</b><p>We sit inside the world's largest optical supply cluster, so consolidation is our native advantage.</p></div></div>
-      </div>
-    </div>
-    <div class="why-visual">
-      <h3>Operator relationships, not transactions</h3>
-      <p class="q">The pattern we build for every long-term customer:</p>
-      <div class="wv-row"><span class="yr">Year 1</span><span>First basket — connectivity + modules, qualified and shipped</span></div>
-      <div class="wv-row"><span class="yr">Year 2</span><span>BOM expands — PON, FTTH boxes, switches join the program</span></div>
-      <div class="wv-row"><span class="yr">Year 3+</span><span>Your trusted one-stop line — forecast allocation, priority capacity</span></div>
-    </div>
+<section id="quality"><div class="wrap">
+  <div class="sec-head"><span class="kicker">How we work</span><h2>From your BOM to a tested shipment</h2><p class="sub">A repeatable process built for buyers who need documentation as much as hardware.</p></div>
+  <div class="grid g4">
+    <div class="step"><span class="num">01</span><h3>Confirm the link</h3><p>Speed, form factor, reach, fiber and switch compatibility are locked in writing before production.</p></div>
+    <div class="step"><span class="num">02</span><h3>Build to spec</h3><p>Modules assembled and calibrated to the published parameters for that model and revision.</p></div>
+    <div class="step"><span class="num">03</span><h3>Test &amp; report</h3><p>Optical and electrical verification, DOM check and a lot-level report before packing.</p></div>
+    <div class="step"><span class="num">04</span><h3>Label &amp; ship</h3><p>Your labeling and packaging, export documents and worldwide delivery from Shenzhen.</p></div>
   </div>
-</section>
+</div></section>
 
-<section id="contact" class="soft" style="border-bottom:none">
-  <div class="wrap">
-    <div class="contact-cta">
-      <h2>Put your next BOM on one order</h2>
-      <p>Send us your hardware list, or request our capability list first. We reply within one business day — with a consolidated quotation, not a sales pitch.</p>
-      <a class="big-mail" href="mailto:sales@taisunop.com">sales@taisunop.com</a><br>
-      <div style="margin:14px 0 22px;font-size:15px;color:#cfe0f2">Phone / WhatsApp / WeChat: <a href="https://wa.me/8618028775069" style="color:#fff;font-weight:600">+86 180 2877 5069</a></div>
-      <a href="mailto:sales@taisunop.com?subject=Request%20capability%20list%20-%20operator%20hardware" class="btn ghost">Email us today</a>
-    </div>
-  </div>
-</section>
+<section class="soft"><div class="wrap">
+  <div class="sec-head"><span class="kicker">Spec snapshot</span><h2>Representative models</h2><p class="sub">A quick look at the parameters we publish. The full catalog has 30+ configurations with complete specifications.</p></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Model</th><th>Form factor</th><th>Reach</th><th>Wavelength</th><th>Connector</th><th>Case temp.</th></tr></thead>
+    <tbody>
+      <tr><td>TS-SFP-10G-SR</td><td>SFP+</td><td>300 m OM3</td><td>850 nm</td><td>Duplex LC</td><td>0–70 °C</td></tr>
+      <tr><td>TS-SFP-25G-LR</td><td>SFP28</td><td>10 km SMF</td><td>1310 nm DFB</td><td>Duplex LC</td><td>0–70 °C</td></tr>
+      <tr><td>TS-Q28-100G-CWDM4</td><td>QSFP28</td><td>10 km SMF</td><td>1270–1330 nm</td><td>Duplex LC</td><td>0–60 °C</td></tr>
+      <tr><td>TS-Q56-200G-SR4</td><td>QSFP56</td><td>100 m OM4</td><td>850 nm ×4</td><td>MPO-12 APC</td><td>0–70 °C</td></tr>
+      <tr><td>TS-QDD-400G-DR4</td><td>QSFP-DD</td><td>500 m SMF</td><td>1311 nm ×4</td><td>MPO-12 APC</td><td>0–70 °C</td></tr>
+      <tr><td>TS-OSFP-800G-DR8</td><td>OSFP</td><td>500 m SMF</td><td>1310 nm ×8</td><td>2 × MPO-12 APC</td><td>0–70 °C</td></tr>
+    </tbody>
+  </table></div>
+  <p style="margin-top:20px"><a href="products.html" class="btn ghost">See all models and full spec tables →</a></p>
+</div></section>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <div class="logo" style="color:#fff">
-        <span class="dot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 12h5l3-7 4 14 3-7h1"/></svg>
-        </span>
-        <span>Taisun Optical</span>
-      </div>
-      <p class="about">One-stop hardware supply for telecom operators — fiber connectivity, PON, transmission and access hardware, coordinated from Shenzhen and delivered worldwide.</p>
-    </div>
-    <div>
-      <h5>Products</h5>
-      <a href="#products">Fiber connectivity</a>
-      <a href="#products">Optical modules</a>
-      <a href="#products">PON / OLT &amp; FTTH</a>
-      <a href="#products">Network equipment</a>
-      <a href="#products">Mobile site &amp; FTTA</a>
-      <a href="#products">OSP &amp; field</a>
-    </div>
-    <div>
-      <h5>Contact</h5>
-      <a href="mailto:sales@taisunop.com">sales@taisunop.com</a>
-      <a href="https://wa.me/8618028775069">+86 180 2877 5069 (WhatsApp / WeChat)</a>
-      <a href="#contact">Request capability list</a>
-      <a href="#about">About Taisun</a>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <div class="wrap">© 2026 Shenzhen Taisun Optical Technology Co., Ltd. · Operator-grade hardware, one-stop supply</div>
-  </div>
-</footer>
+<section id="contact"><div class="wrap"><div class="cta-band">
+  <div><h2>Need a quote on a specific module?</h2><p>Send the model or link parameters — speed, form factor, reach and quantity. We will confirm the exact build, unit price and test report format.</p></div>
+  <a class="btn" href="mailto:sales@taisunop.com?subject=Optical%20module%20quotation%20request">Email sales@taisunop.com</a>
+</div></div></section>
+</main>
 
+<footer><div class="wrap">
+  <div><img src="assets/logo/logo-light.svg" alt="Taisun Optical"><p>Shenzhen Taisun Optical Technology Co., Ltd.<br>Optical transceiver factory · SFP to OSFP, 10G to 800G.</p></div>
+  <div><h5>Products</h5><a href="products.html">Full catalog</a><a href="products.html">10G / 25G modules</a><a href="products.html">100G / 200G modules</a><a href="products.html">400G / 800G modules</a><a href="products.html">DAC &amp; AOC cables</a></div>
+  <div><h5>Contact</h5><a href="mailto:sales@taisunop.com">sales@taisunop.com</a><a href="products.html">Request a quote</a><span>Shenzhen, China</span></div>
+  <div class="bottom" style="grid-column:1/-1">© 2026 Taisun Optical. All specifications subject to the agreed datasheet for each order.</div>
+</div></footer>
 </body>
 </html>

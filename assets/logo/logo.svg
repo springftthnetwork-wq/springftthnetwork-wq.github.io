@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" role="img" aria-label="Taisun Optical">
+  <g transform="translate(0 4)">
+    <rect x="4" y="18" width="44" height="9" rx="4.5" fill="#0b2a4a"/>
+    <rect x="21.5" y="18" width="9" height="36" rx="4.5" fill="#0b2a4a"/>
+    <path d="M7 51 L45 26" stroke="#12b8a6" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="26" cy="39" r="3.2" fill="#12b8a6"/>
+  </g>
+  <text x="66" y="34" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" letter-spacing="0.6" fill="#0b2a4a">TAISUN</text>
+  <text x="67" y="53" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="4.2" fill="#12b8a6">OPTICAL</text>
+</svg>

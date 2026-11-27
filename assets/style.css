@@ -145,6 +145,14 @@ details th{background:var(--soft);color:var(--navy)}
 .note{font-size:12.5px;color:var(--muted);margin-top:22px;padding:14px 16px;background:var(--soft);border-left:3px solid var(--teal);border-radius:0 8px 8px 0}
 .empty{padding:60px;text-align:center;color:var(--muted)}
 
+/* QTSA landing page */
+.qtsa-hero .hero-pic{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);text-align:center}
+.qtsa-hero .hero-pic img{width:100%;max-height:420px;object-fit:contain;mix-blend-mode:multiply}
+.qtsa-hero .hero-pic .hc-foot{margin-top:8px}
+.spec-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+.spec-cards h3{font-size:16px;color:var(--teal);font-weight:800}
+@media(max-width:680px){.spec-cards{grid-template-columns:1fr}}
+
 @media(max-width:980px){
   .hero .wrap{grid-template-columns:1fr;padding-top:52px;padding-bottom:52px}
   .hero-card{max-width:560px}

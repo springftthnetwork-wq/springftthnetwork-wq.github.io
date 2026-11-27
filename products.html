@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optical Transceiver Catalog 10G–800G | Taisun Optical</title>
+<meta name="description" content="Browse Taisun Optical's full catalog: 10G, 25G, 40G, 100G, 200G, 400G and 800G transceivers plus DAC and AOC cables. Exact reach, wavelength, connector and operating temperature for every model.">
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Shenzhen optical transceiver factory · 10G → 800G</span><span><b>Factory direct</b> · OEM / ODM welcome</span></div></div>
+<header class="nav"><div class="wrap">
+  <a href="index.html" class="logo"><img src="assets/logo/logo.svg" alt="Taisun Optical"></a>
+  <nav class="menu" id="menu">
+    <a href="index.html#families">Product lines</a>
+    <a href="index.html#capability">Factory</a>
+    <a href="index.html#quality">Quality</a>
+    <a href="products.html">Full catalog</a>
+    <a href="mailto:sales@taisunop.com?subject=Optical%20module%20quotation%20request" class="btn teal">Request a quote</a>
+  </nav>
+  <button class="burger" aria-label="Toggle menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="page-hero"><div class="wrap">
+  <span class="kicker">Optical module catalog</span>
+  <h1>Full transceiver range, with the parameters you need</h1>
+  <p class="sub">Each model below is listed with the specification published by the factory. Use the filters to narrow by speed, then request a quote with the model number in the subject line.</p>
+  <div class="filters" id="filters"></div>
+  <input class="search" id="search" type="search" placeholder="Search model, form factor, reach…" aria-label="Search catalog">
+</div></section>
+
+<section><div class="wrap">
+  <div class="result-line"><span id="count"></span><span>All models available with OEM labeling and lot test reports</span></div>
+  <div class="prod-grid" id="grid"></div>
+  <div class="note">Specifications shown are transcribed from the factory specification sheet set dated 20 Aug 2026. Reach figures assume the fiber type and FEC conditions stated per model. Final datasheet for a specific order is confirmed in the quotation.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><img src="assets/logo/logo-light.svg" alt="Taisun Optical"><p>Shenzhen Taisun Optical Technology Co., Ltd.<br>Optical transceiver factory · SFP to OSFP, 10G to 800G.</p></div>
+  <div><h5>Products</h5><a href="products.html">Full catalog</a><a href="index.html#families">10G / 25G modules</a><a href="index.html#families">100G / 200G modules</a><a href="index.html#families">400G / 800G modules</a><a href="index.html#families">DAC &amp; AOC cables</a></div>
+  <div><h5>Contact</h5><a href="mailto:sales@taisunop.com">sales@taisunop.com</a><a href="mailto:sales@taisunop.com?subject=Optical%20module%20quotation%20request">Request a quote</a><span>Shenzhen, China</span></div>
+  <div class="bottom" style="grid-column:1/-1">© 2026 Taisun Optical. All specifications subject to the agreed datasheet for each order.</div>
+</div></footer>
+
+<script src="assets/products.js"></script>
+<script>
+const grid=document.getElementById('grid');
+const filters=document.getElementById('filters');
+const search=document.getElementById('search');
+const count=document.getElementById('count');
+let active='All';
+
+CATS.forEach(c=>{
+  const b=document.createElement('button');
+  b.className='chip'+(c==='All'?' on':'');
+  b.textContent=c;
+  b.onclick=()=>{active=c;[...filters.children].forEach(x=>x.classList.toggle('on',x===b));render()};
+  filters.appendChild(b);
+});
+
+function quoteLink(p){
+  const subject=encodeURIComponent('Quotation request - '+p.model+' ('+p.name+')');
+  const body=encodeURIComponent('Hello,\n\nPlease quote '+p.model+' / '+p.name+'.\n\nQuantity: \nSwitch/platform: \nRequired reach: \nTarget delivery: \n\nThank you.');
+  return 'mailto:sales@taisunop.com?subject='+subject+'&body='+body;
+}
+
+function card(p){
+  return `<article class="card">
+    <div class="pic"><img src="assets/images/${p.img}" alt="${p.name}" loading="lazy"></div>
+    <div class="body">
+      <div class="badges"><span class="tag navy">${p.cat}</span><span class="tag">${p.form}</span></div>
+      <h3>${p.name}</h3><div class="model">${p.model}</div>
+      <dl class="spec">
+        <dt>Reach</dt><dd>${p.reach}</dd>
+        <dt>Wavelength</dt><dd>${p.wave}</dd>
+        <dt>Connector</dt><dd>${p.conn}</dd>
+        <dt>Case temp.</dt><dd>${p.temp}</dd>
+      </dl>
+      <div class="actions"><a class="btn" href="${quoteLink(p)}">Request quote</a><a href="${quoteLink(p)}">Get datasheet →</a></div>
+      <details><summary>Full specification</summary>
+        <table><tbody>
+          <tr><th>Model</th><td>${p.model}</td></tr>
+          <tr><th>Form factor</th><td>${p.form}</td></tr>
+          <tr><th>Line rate</th><td>${p.cat==='Cables'?'See cable spec':p.cat+' aggregate'}</td></tr>
+          <tr><th>Reach</th><td>${p.reach}</td></tr>
+          <tr><th>Wavelength / medium</th><td>${p.wave}</td></tr>
+          <tr><th>Connector</th><td>${p.conn}</td></tr>
+          <tr><th>Case temperature</th><td>${p.temp}</td></tr>
+          <tr><th>Power</th><td>${p.power}</td></tr>
+          <tr><th>Standards</th><td>${p.std}</td></tr>
+          <tr><th>Note</th><td>${p.note}</td></tr>
+        </tbody></table>
+      </details>
+    </div>
+  </article>`;
+}
+
+function render(){
+  const q=search.value.trim().toLowerCase();
+  const list=PRODUCTS.filter(p=>(active==='All'||p.cat===active)&&(!q||[p.name,p.model,p.form,p.reach,p.wave,p.conn,p.std].join(' ').toLowerCase().includes(q)));
+  count.textContent=list.length+' model'+(list.length===1?'':'s')+(active==='All'?'':' in '+active);
+  grid.innerHTML=list.length?list.map(card).join(''):'<div class="empty">No matching model. Try a different speed or keyword.</div>';
+}
+search.addEventListener('input',render);
+render();
+</script>
+</body>
+</html>

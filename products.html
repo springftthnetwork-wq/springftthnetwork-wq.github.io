@@ -68,7 +68,7 @@ function quoteLink(p){
 
 function card(p){
   return `<article class="card">
-    <div class="pic"><img src="assets/images/${p.img}" alt="${p.name}" loading="lazy"></div>
+    <div class="pic"><img class="card-logo" src="assets/logo/logo.svg" alt="Taisun Optical logo"><img src="assets/images/${p.img}" alt="${p.name}" loading="lazy"></div>
     <div class="body">
       <div class="badges"><span class="tag navy">${p.cat}</span><span class="tag">${p.form}</span></div>
       <h3>${p.name}</h3><div class="model">${p.model}</div>

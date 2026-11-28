@@ -72,7 +72,8 @@ h3{font-size:18px;color:var(--navy);margin-bottom:9px}
 /* product family cards */
 .fam{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
 .fam:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c9d8e6}
-.fam .pic{height:186px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line)}
+.fam .pic{height:186px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line);position:relative}
+.fam .pic .card-logo{position:absolute;left:16px;top:14px;width:88px;height:auto;opacity:.95;mix-blend-mode:normal;z-index:2;pointer-events:none}
 .fam .pic img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
 .fam .body{padding:19px;display:flex;flex-direction:column;gap:8px;flex:1}
 .fam .body h3{margin:0}
@@ -122,8 +123,9 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;paddin
 .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
 .card:hover{box-shadow:var(--shadow)}
-.card .pic{height:188px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line)}
+.card .pic{height:188px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line);position:relative}
 .card .pic img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.card .pic img.card-logo{position:absolute;left:14px;top:12px;width:76px;max-height:none;mix-blend-mode:normal;z-index:2;pointer-events:none;opacity:.95}
 .card .body{padding:18px;display:flex;flex-direction:column;flex:1}
 .card .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
 .card h3{font-size:16px;margin-bottom:3px}
